@@ -97,7 +97,7 @@ export class RankComicService {
       const title = $(el).find('figcaption > h3 > a').text();
       const href = $(el).find('figcaption > h3 > a').attr('href');
       const slug = href.split('/')[href.split('/').length - 1];
-      const imageSrc = 'http:' + $(el).find('.image > a > img').attr('data-original');
+      const imageSrc = 'https:' + $(el).find('.image > a > img').attr('data-original');
       const rate = $(el)
         .find('.image .view span')
         .text()

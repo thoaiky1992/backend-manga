@@ -33,7 +33,7 @@ export class ComicDetailService {
       const detailInfo = $('.detail-info');
 
       data.title = $('h1.title-detail').text();
-      data.imageSrc = 'http:' + $(detailInfo).find('.col-image > img').attr('src');
+      data.imageSrc = 'https:' + $(detailInfo).find('.col-image > img').attr('src');
       data.author = $(detailInfo).find('.col-info > ul .author > .col-xs-8').text();
       data.status = $(detailInfo).find('.col-info > ul .status > .col-xs-8').text();
       data.views = $(detailInfo).find('.col-info > ul li:last-child > .col-xs-8').text();

@@ -25,7 +25,7 @@ export class SearchComicService {
       $('.ModuleContent .items .item').each((i, el) => {
         const item: SearchComicInput = new SearchComicInput();
         item.slug = $(el).find('.image > a').attr('href').split('truyen-tranh/')[1];
-        item.imgSrc = 'http:' + $(el).find('.image > a img').attr('src');
+        item.imgSrc = 'https:' + $(el).find('.image > a img').attr('src');
         item.title = $(el).find('figcaption h3 > a').text();
         const rate = $(el)
           .find('.image .view span.pull-left')

@@ -35,7 +35,7 @@ export class ReadComicService {
       const $2 = load(html2);
 
       $1('.reading-detail .page-chapter').each((i, el) => {
-        data.imageSrcList.push('http:' + $1(el).find('img').attr('src'));
+        data.imageSrcList.push('https:' + $1(el).find('img').attr('src'));
       });
 
       data.currentChapterIndexText = $1('.reading .top h1 span').text().split('-')[1].trim();

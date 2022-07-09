@@ -29,7 +29,7 @@ export class RecommendedComicService {
 
     $('.lazyOwl').each(function () {
       const dom = $(this).parent().parent();
-      const imageSrc = 'http:' + dom.find('.item > a > img').attr('data-src');
+      const imageSrc = 'https:' + dom.find('.item > a > img').attr('data-src');
       const href = dom.find('.item > a').attr('href');
       const slug = href.split('/')[href.split('/').length - 1];
       const title = dom.find('.slide-caption > h3 > a').text();
