@@ -1,0 +1,100 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ReccommendedComicModel {
+  title: String!
+  chapIndexText: String!
+  imageSrc: String!
+  slug: String!
+  chapUpdatedAtText: String!
+}
+
+type NewComicModel {
+  imageSrc: String!
+  views: String!
+  likes: String!
+  title: String!
+  chapIndexText: String!
+  chapUpdatedAtText: String!
+  slug: String!
+}
+
+type RankComicModel {
+  imageSrc: String!
+  views: String!
+  likes: String!
+  title: String!
+  chapIndexText: String!
+  chapUpdatedAtText: String!
+  slug: String!
+}
+
+type GenreModel {
+  slug: String!
+  title: String!
+}
+
+type ComicByAsPathModel {
+  imageSrc: String!
+  views: String!
+  likes: String!
+  title: String!
+  chapIndexText: String!
+  chapUpdatedAtText: String!
+  slug: String!
+}
+
+type GenreByAsPathModel {
+  comics: [ComicByAsPathModel!]!
+  totalPage: Float!
+}
+
+type ComicDetailChapterModel {
+  chapterIndexText: String!
+  updatedAtText: String!
+  href: String!
+}
+
+type ComicDetailModel {
+  imageSrc: String!
+  title: String!
+  author: String!
+  status: String!
+  views: String!
+  description: String!
+  chapters: [ComicDetailChapterModel!]!
+}
+
+type ReadComicModel {
+  imageSrcList: [String!]!
+  currentChapterIndexText: String!
+  currentChapterIndex: Float!
+  currentChapterHref: String!
+  previousChapterHref: String!
+  nextChapterHref: String!
+  chapters: [ComicDetailChapterModel!]!
+}
+
+type SearchComicModel {
+  imgSrc: String!
+  title: String!
+  views: String!
+  likes: String!
+  chapterIndexText: String!
+  updatedAtText: String!
+  slug: String!
+}
+
+type Query {
+  getRecommendedComic: [ReccommendedComicModel!]!
+  getNewComic(page: Float = 1): [NewComicModel!]!
+  getTopMonthComic(page: Float = 1): [RankComicModel!]!
+  getTopWeekComic(page: Float = 1): [RankComicModel!]!
+  getTopDayComic(page: Float = 1): [RankComicModel!]!
+  getGenre: [GenreModel!]!
+  getComicByAsPath(asPath: String!, page: Float = 1): GenreByAsPathModel!
+  getComicDetailBySlug(slug: String!, page: Float = 1): ComicDetailModel!
+  readComic(slug: String!): ReadComicModel!
+  searchComic(keySearch: String!, page: Float = 1): [SearchComicModel!]!
+}
